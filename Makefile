@@ -14,7 +14,7 @@ help:
 
 start:
 	docker-compose run nodejs npm install
-	docker-compose up --build -d
+	docker-compose -f docker-compose.yml -f ./e2e/cy-open.yml up --build -d
 	sleep 3
 
 stop:
